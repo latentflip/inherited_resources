@@ -199,7 +199,7 @@ module InheritedResources
       # where no method for association chain is called.
       #
       def method_for_association_chain #:nodoc:
-        resource_collection_name
+        :"#{resource_class.to_s.underscore.pluralize}"
       end
 
       # Returns finder method for instantiate resource by params[:id]
